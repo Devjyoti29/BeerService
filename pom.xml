@@ -16,7 +16,7 @@
     <properties>
         <java.version>17</java.version>
         <org.mapstruct.version>1.5.2.Final</org.mapstruct.version>
-        <spring-boot.run.profiles>localmysql</spring-boot.run.profiles>
+        <spring-boot.run.profiles>default</spring-boot.run.profiles>
         <jwt-uri>http://example.com:9090</jwt-uri>
         <docker.image.prefix>devregistry2502.azurecr.io</docker.image.prefix>
         <jib-maven-plugin.version>3.3.2</jib-maven-plugin.version>
