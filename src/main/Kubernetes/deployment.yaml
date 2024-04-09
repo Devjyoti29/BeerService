@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beerservice-deployment
+  namespace: nginx-ingress
+  labels:
+    app: beerservice-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: beerservice
+  template:
+    metadata:
+      labels:
+        app: beerservice
+    spec:
+      containers:
+        - name: beer-service
+          image: devregistry2502.azurecr.io/beer-service:latest
+          ports:
+            - containerPort: 8080
